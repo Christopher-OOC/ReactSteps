@@ -4,10 +4,7 @@ import "./index1.css";
 export default function App1() {
   const [boxIds, setBoxIds] = useState([1, 2, 3, 4]);
 
-  console.log(boxIds);
-
   function handleBoxClick(boxId) {
-    console.log((boxIds) => boxIds.filter((id) => id !== boxId).unshift(boxId));
     const newList = boxIds.filter((id) => id !== boxId);
     newList.unshift(boxId);
     setBoxIds((boxIds) => newList);
